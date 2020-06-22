@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<!--
+    @author Bogdan-Alexandru Mezei
+-->
+
+<Pane prefHeight="960.0" prefWidth="937.0" styleClass="bigForm" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.HomeViewController">
+   <children>
+      <ScrollPane fx:id="scrollPane" focusTraversable="false" layoutX="39.0" layoutY="77.0" pickOnBounds="false" prefHeight="828.0" prefWidth="629.0" scaleShape="false" styleClass="form" stylesheets="@../resources/style.css">
+         <content>
+            <VBox fx:id="vBox" prefWidth="573.0" spacing="27.0" styleClass="vBox" stylesheets="@../resources/style.css" />
+         </content>
+         <padding>
+            <Insets bottom="27.0" left="27.0" top="27.0" />
+         </padding>
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#d1cbbe" height="49.92" offsetX="10.0" offsetY="10.0" radius="27.61" width="62.52" />
+         </effect>
+      </ScrollPane>
+      <Pane layoutX="703.0" layoutY="77.0" prefHeight="828.0" prefWidth="200.0" styleClass="form" stylesheets="@../resources/style.css">
+         <effect>
+            <DropShadow blurType="GAUSSIAN" color="#d1cbbe" height="49.92" offsetX="10.0" offsetY="10.0" radius="27.61" width="62.52" />
+         </effect>
+         <children>
+            <Button fx:id="newPost" layoutX="23.0" layoutY="652.0" mnemonicParsing="false" onAction="#makeNewPost" onMousePressed="#pressed" onMouseReleased="#released" prefHeight="153.0" prefWidth="154.0" styleClass="bigButton" stylesheets="@../resources/style.css">
+               <effect>
+                  <DropShadow blurType="GAUSSIAN" color="#c77550" height="56.22" offsetX="10.0" offsetY="10.0" radius="29.185000000000002" width="62.52" />
+               </effect>
+            </Button>
+            <ImageView fx:id="create" fitHeight="74.0" fitWidth="73.0" layoutX="66.0" layoutY="694.0" mouseTransparent="true" pickOnBounds="true" preserveRatio="true" styleClass="bigButton">
+               <image>
+                  <Image url="@../resources/newPost.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="-0.02" contrast="-0.12" />
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="17.0" layoutY="14.0" text="Welcome back!" textFill="#f5f1ed">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox fx:id="manageProfileHBox" alignment="CENTER_RIGHT" layoutY="414.0" onMouseClicked="#manageProfile" prefHeight="61.0" prefWidth="200.0" spacing="10.0" styleClass="menuItem" stylesheets="@../resources/style.css">
+               <children>
+                  <Label text="Manage Profile" textFill="#f5f1ed">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/gear.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust contrast="-0.14" />
+                     </effect>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </ImageView>
+               </children>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="theTeamHBox" alignment="CENTER_RIGHT" layoutY="475.0" onMouseClicked="#theTeam" prefHeight="61.0" prefWidth="200.0" spacing="10.0" styleClass="menuItem" stylesheets="@../resources/style.css">
+               <children>
+                  <Label text="The Team" textFill="#f5f1ed">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/teamcake.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="-0.03" contrast="-0.05" />
+                     </effect>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets right="10.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="myProfileHBox" alignment="CENTER_RIGHT" layoutY="353.0" onMouseClicked="#myProfile" prefHeight="61.0" prefWidth="200.0" spacing="10.0" styleClass="menuItem" stylesheets="@../resources/style.css">
+               <children>
+                  <Label text="My Profile" textFill="#f5f1ed">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="26.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/white_anon.png" />
+                     </image>
+                     <effect>
+                        <ColorAdjust brightness="-0.03" contrast="-0.05" />
+                     </effect>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <HBox fx:id="hallOfFameHBox" alignment="CENTER_RIGHT" layoutY="529.0" onMouseClicked="#hallOfFame" prefHeight="61.0" prefWidth="200.0" spacing="10.0" styleClass="menuItem" stylesheets="@../resources/style.css">
+               <children>
+                  <Label text="Hall Of Fame" textFill="#f5f1ed">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../resources/dogmedal.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+            </HBox>
+            <VBox alignment="TOP_CENTER" layoutX="16.0" layoutY="52.0" prefHeight="303.0" prefWidth="180.0">
+               <children>
+                  <Circle fx:id="portrait" fill="#f5f1ed" radius="50.0" stroke="#5b8266" strokeType="INSIDE" strokeWidth="3.0" styleClass="stack" />
+                  <Label fx:id="handleLabel" alignment="CENTER" contentDisplay="CENTER" text="\@SunnyShiba" textAlignment="CENTER" textFill="#5b8266">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nameLabel" alignment="TOP_CENTER" stylesheets="@../resources/style.css" text="Daria Popa" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </Pane>
+      <ImageView fitHeight="144.0" fitWidth="213.0" layoutX="39.0" layoutY="-29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/long_logo.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="iconX" fitHeight="34.0" fitWidth="26.0" layoutX="897.0" layoutY="17.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="button">
+         <image>
+            <Image url="@../resources/icon_x.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.03" contrast="-1.0" />
+         </effect>
+      </ImageView>
+   </children>
+</Pane>

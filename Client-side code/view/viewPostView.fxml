@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--
+    @author Bogdan-Alexandru Mezei
+-->
+
+<Pane prefHeight="743.0" prefWidth="1366.0" styleClass="bigForm" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ViewPostViewController">
+    <children>
+        <Pane layoutX="695.0" layoutY="26.0" prefHeight="136.0" prefWidth="629.0" styleClass="form">
+            <children>
+                <Label fx:id="wallLabel1" alignment="TOP_RIGHT" layoutX="252.0" layoutY="-6.0" prefHeight="114.0" prefWidth="364.0" stylesheets="@../resources/style.css" text="Comments" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="42.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <Pane layoutX="38.0" layoutY="26.0" prefHeight="136.0" prefWidth="629.0" styleClass="form">
+            <children>
+                <Label fx:id="wallLabel" alignment="TOP_RIGHT" layoutX="251.0" layoutY="-8.0" prefHeight="114.0" prefWidth="364.0" stylesheets="@../resources/style.css" text="Post" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="42.0" />
+                    </font>
+                </Label>
+            </children>
+        </Pane>
+        <ScrollPane fx:id="scrollPane" layoutX="695.0" layoutY="71.0" prefHeight="643.0" prefWidth="629.0" styleClass="form" stylesheets="@../resources/style.css">
+            <content>
+                <VBox fx:id="vBox" prefWidth="574.0" spacing="27.0" styleClass="vBox" stylesheets="@../resources/style.css" />
+            </content>
+            <padding>
+                <Insets bottom="27.0" left="27.0" top="27.0" />
+            </padding>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#d1cbbe" height="49.92" offsetX="10.0" offsetY="10.0" radius="27.61" width="62.52" />
+            </effect>
+        </ScrollPane>
+        <ImageView fx:id="iconX" fitHeight="34.0" fitWidth="26.0" layoutX="1330.0" layoutY="13.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="button">
+            <image>
+                <Image url="@../resources/icon_x.png" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.03" contrast="-1.0" />
+            </effect>
+        </ImageView>
+        <Pane layoutX="38.0" layoutY="71.0" prefHeight="643.0" prefWidth="629.0" styleClass="form">
+            <children>
+                <VBox fx:id="postVBox" layoutX="16.0" layoutY="19.0" prefHeight="597.0" prefWidth="595.0" />
+            </children>
+        </Pane>
+    </children>
+</Pane>
+

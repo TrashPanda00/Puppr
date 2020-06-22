@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<!--
+    @author Bogdan-Alexandru Mezei
+-->
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="445.0" styleClass="bigForm" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.EditDogViewController">
+    <children>
+        <Pane layoutX="24.0" layoutY="39.0" prefHeight="594.0" prefWidth="389.0" styleClass="form" stylesheets="@../resources/style.css">
+            <children>
+                <Label layoutX="35.0" layoutY="14.0" text="Name" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="dogNameField" layoutX="42.0" layoutY="70.0" prefHeight="56.0" prefWidth="316.0" promptText="Max" style="-fx-background-color: #F5F1ED; -fx-text-fill: #454545;" stylesheets="@../resources/style.css">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="imageButton" layoutX="34.0" layoutY="417.0" mnemonicParsing="false" onAction="#imageButtonClicked" prefHeight="60.0" prefWidth="174.0" styleClass="buttonlogin" text="Set Image" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Button>
+                <Label layoutX="34.0" layoutY="145.0" text="Dog Description" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <TextArea fx:id="dogText" layoutX="42.0" layoutY="201.0" prefHeight="176.0" prefWidth="316.0" promptText="Tell us about your dog!" style="-fx-background-color: #f5f1ed; -fx-font-color: #888888;" wrapText="true">
+                    <font>
+                        <Font size="27.0" />
+                    </font>
+                </TextArea>
+                <Button fx:id="addDogButton" layoutX="34.0" layoutY="499.0" mnemonicParsing="false" onAction="#editDogButtonClicked" prefHeight="60.0" prefWidth="174.0" styleClass="buttonlogin" text="Edit">
+                    <font>
+                        <Font name="System Bold" size="21.0" />
+                    </font>
+                </Button>
+                <Rectangle fx:id="dogPicture" arcHeight="10.0" arcWidth="5.0" fill="#f5f1ed" height="138.0" layoutX="218.0" layoutY="419.0" stroke="#f5f1ed" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" styleClass="preview" width="138.0" />
+            </children>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#d1cbbe" height="49.92" offsetX="10.0" offsetY="10.0" radius="27.61" width="62.52" />
+            </effect>
+        </Pane>
+        <ImageView fx:id="iconX" fitHeight="34.0" fitWidth="26.0" layoutX="403.0" layoutY="13.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="button">
+            <image>
+                <Image url="@../resources/icon_x.png" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.03" contrast="-1.0" />
+            </effect>
+        </ImageView>
+    </children>
+</Pane>

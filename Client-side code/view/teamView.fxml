@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<!--
+    @author Bogdan-Alexandru Mezei
+-->
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="606.0" prefWidth="886.0" styleClass="mainFxmlClass" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.TeamViewController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="349.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/logo_puppr_transparent.png" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_LEFT" layoutX="290.0" layoutY="148.0" prefHeight="114.0" prefWidth="306.0" stylesheets="@../resources/style.css" text="Meet the team" textAlignment="CENTER" textFill="#f1bf98" wrapText="true">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Label>
+      <Pane layoutX="24.0" layoutY="218.0" prefHeight="367.0" prefWidth="200.0" styleClass="form">
+         <children>
+            <ImageView fitHeight="181.0" fitWidth="181.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/bogdan.jpg" />
+               </image>
+               <effect>
+                  <GaussianBlur radius="0.4" />
+               </effect>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="21.0" layoutY="195.0" prefHeight="73.0" prefWidth="159.0" stylesheets="@../resources/style.css" text="Bogdan Mezei" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="57.0" layoutY="268.0" prefHeight="23.0" prefWidth="88.0" text="293137" textFill="#5b8266">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="22.0" layoutY="294.0" prefHeight="73.0" prefWidth="151.0" stylesheets="@../resources/style.css" text="Product Owner" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="236.0" layoutY="218.0" prefHeight="367.0" prefWidth="200.0" styleClass="form">
+         <children>
+            <ImageView fitHeight="181.0" fitWidth="181.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/daria.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="195.0" prefHeight="73.0" prefWidth="180.0" stylesheets="@../resources/style.css" text="Daria Maria Popa" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="268.0" text="293087" textFill="#5b8266">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="22.0" layoutY="294.0" prefHeight="73.0" prefWidth="159.0" stylesheets="@../resources/style.css" text="Software Developer" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="448.0" layoutY="218.0" prefHeight="367.0" prefWidth="200.0" styleClass="form">
+         <children>
+            <ImageView fitHeight="181.0" fitWidth="247.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/lukas.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="195.0" prefHeight="73.0" prefWidth="180.0" stylesheets="@../resources/style.css" text="Lukas Suslavicius" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="268.0" text="293717" textFill="#5b8266">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="22.0" layoutY="294.0" prefHeight="73.0" prefWidth="151.0" stylesheets="@../resources/style.css" text="SCRUM Master" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="662.0" layoutY="218.0" prefHeight="367.0" prefWidth="200.0" styleClass="form">
+         <children>
+            <ImageView fitHeight="181.0" fitWidth="200.0" layoutX="9.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/natali.jpg" />
+               </image>
+            </ImageView>
+            <Label alignment="TOP_CENTER" layoutX="8.0" layoutY="198.0" prefHeight="73.0" prefWidth="180.0" stylesheets="@../resources/style.css" text="Natali Munk-Jakobsen" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="60.0" layoutY="271.0" text="293132" textFill="#5b8266">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="294.0" prefHeight="73.0" prefWidth="159.0" stylesheets="@../resources/style.css" text="Software Developer" textAlignment="CENTER" textFill="#f5f1ed" wrapText="true">
+               <font>
+                  <Font name="System Italic" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="iconX" fitHeight="34.0" fitWidth="26.0" layoutX="849.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="button">
+         <image>
+            <Image url="@../resources/icon_x.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="-0.03" contrast="-1.0" />
+         </effect>
+      </ImageView>
+   </children>
+</Pane>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<!--
+    @author Bogdan-Alexandru Mezei
+-->
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="641.0" prefWidth="1144.0" styleClass="bigForm" stylesheets="@../resources/style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ManageProfileViewController">
+    <children>
+        <Pane layoutX="35.0" layoutY="51.0" prefHeight="551.0" prefWidth="820.0" styleClass="form">
+            <children>
+                <Label layoutX="27.0" layoutY="14.0" text="First name" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <Label layoutX="27.0" layoutY="134.0" text="Last name" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="firstNameField" layoutX="34.0" layoutY="70.0" prefHeight="56.0" prefWidth="342.0" promptText="George" style="-fx-background-color: #F5F1ED; -fx-text-fill: #454545;">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="lastNameField" layoutX="34.0" layoutY="190.0" prefHeight="56.0" prefWidth="342.0" promptText="Woofington" style="-fx-background-color: #F5F1ED; -fx-text-fill: #454545;">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="416.0" layoutY="14.0" text="Personal Description" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <Label layoutX="26.0" layoutY="370.0" text="Email" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="emailField" layoutX="33.0" layoutY="426.0" prefHeight="56.0" prefWidth="342.0" promptText="george_woof@puppr.dk" style="-fx-background-color: #F5F1ED; -fx-text-fill: #454545;">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="417.0" layoutY="254.0" text="Date of birth" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <Label layoutX="26.0" layoutY="254.0" text="Handle" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="handleField" disable="true" editable="false" layoutX="34.0" layoutY="310.0" prefHeight="56.0" prefWidth="342.0" promptText="\@ilovetre4ts" style="-fx-background-color: #F5F1ED; -fx-text-fill: #454545;">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="418.0" layoutY="370.0" text="Gender" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="39.0" />
+                    </font>
+                </Label>
+                <RadioButton fx:id="maleButton" layoutX="440.0" layoutY="426.0" mnemonicParsing="false" text="Male" textFill="#f5f1ed">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="gender" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="femaleButton" layoutX="619.0" layoutY="426.0" mnemonicParsing="false" text="Female" textFill="#f5f1ed" toggleGroup="$gender">
+                    <font>
+                        <Font name="System Bold" size="32.0" />
+                    </font>
+                </RadioButton>
+                <DatePicker fx:id="birthday" layoutX="436.0" layoutY="308.0" prefHeight="56.0" prefWidth="354.0" />
+                <TextArea fx:id="bioText" layoutX="430.0" layoutY="67.0" prefHeight="176.0" prefWidth="354.0" promptText="Tell us about yourself!" style="-fx-background-color: #f5f1ed; -fx-font-color: #888888;" wrapText="true">
+                    <font>
+                        <Font size="25.0" />
+                    </font>
+                </TextArea>
+                <Label fx:id="errorLabel" alignment="CENTER" layoutX="430.0" layoutY="473.0" prefHeight="75.0" prefWidth="354.0" textAlignment="CENTER" textFill="#cd0000" wrapText="true">
+                    <font>
+                        <Font size="20.0" />
+                    </font>
+                </Label>
+            </children>
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#d1cbbe" height="49.92" offsetX="10.0" offsetY="10.0" radius="27.61" width="62.52" />
+            </effect>
+        </Pane>
+        <ImageView fx:id="iconX" fitHeight="34.0" fitWidth="26.0" layoutX="1100.0" layoutY="14.0" onMouseClicked="#close" pickOnBounds="true" preserveRatio="true" styleClass="button">
+            <image>
+                <Image url="@../resources/icon_x.png" />
+            </image>
+            <effect>
+                <ColorAdjust brightness="-0.03" contrast="-1.0" />
+            </effect>
+        </ImageView>
+        <Pane layoutX="877.0" layoutY="51.0" prefHeight="551.0" prefWidth="236.0" styleClass="form" stylesheets="@../resources/style.css">
+            <effect>
+                <DropShadow blurType="GAUSSIAN" color="#d1cbbe" height="49.92" offsetX="10.0" offsetY="10.0" radius="27.61" width="62.52" />
+            </effect>
+            <children>
+                <Button layoutX="37.0" layoutY="258.0" mnemonicParsing="false" onAction="#setImage" prefHeight="37.0" prefWidth="170.0" styleClass="buttoncomm" text="Upload image" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Button layoutX="68.0" layoutY="470.0" mnemonicParsing="false" onAction="#save" prefHeight="56.0" prefWidth="109.0" styleClass="buttonlogin" text="Save" textFill="#f1bf98">
+                    <font>
+                        <Font name="System Bold" size="26.0" />
+                    </font>
+                </Button>
+                <Button fx:id="changePassword" layoutX="37.0" layoutY="305.0" mnemonicParsing="false" onAction="#changePassword" prefHeight="36.0" prefWidth="170.0" styleClass="buttoncomm" text="Change Password" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <ImageView fx:id="imageView" fitHeight="193.0" fitWidth="200.0" layoutX="20.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true" />
+                <Button fx:id="addDogButton" layoutX="37.0" layoutY="352.0" mnemonicParsing="false" onAction="#addDog" prefHeight="37.0" prefWidth="170.0" styleClass="buttoncomm" text="Add Dog" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Rectangle fx:id="profile" arcHeight="10.0" arcWidth="5.0" fill="#f5f1ed" height="193.0" layoutX="23.0" layoutY="26.0" stroke="#f5f1ed" strokeLineCap="ROUND" strokeLineJoin="BEVEL" strokeType="OUTSIDE" strokeWidth="2.0" width="191.0" />
+            </children>
+        </Pane>
+    </children>
+</Pane>
